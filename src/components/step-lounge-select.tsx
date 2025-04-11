@@ -1,6 +1,7 @@
 'use client'; // Convert to Client Component
 
 import React from 'react';
+import { LOUNGES } from '@/lib/constants'; // Import lounges constant
 
 // Define props interface
 interface StepLoungeSelectProps {
@@ -11,14 +12,8 @@ interface StepLoungeSelectProps {
 }
 
 const StepLoungeSelect: React.FC<StepLoungeSelectProps> = ({ formData, handleChange }) => {
-    const lounges = [
-        { id: 'table_bay', name: 'Table Bay Mall' },
-        { id: 'camps_bay', name: 'Camps Bay' },
-        { id: 'durbanville', name: 'Durbanville' },
-        { id: 'paarl', name: 'Paarl' },
-        { id: 'somerset_west', name: 'Somerset West' },
-        { id: 'stellenbosch', name: 'Stellenbosch' },
-    ];
+    // Use imported constant
+    // const lounges = [...]; // Remove hardcoded array
 
     return (
         <div className="mb-8">
@@ -33,7 +28,8 @@ const StepLoungeSelect: React.FC<StepLoungeSelectProps> = ({ formData, handleCha
                     required
                 >
                     <option value="" disabled>Select Lounge...</option>
-                    {lounges.map((lounge) => (
+                    {/* Map over imported LOUNGES constant */}
+                    {LOUNGES.map((lounge) => (
                         <option key={lounge.id} value={lounge.id}>
                             {lounge.name}
                         </option>

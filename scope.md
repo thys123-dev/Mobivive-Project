@@ -237,6 +237,7 @@ I:\AIVoice\Projects\Mobivive\mobibookings
 │   ├── api\                 # API Routes (Server-Side Logic)
 │   │   └── bookings\        # Specific endpoint for booking logic
 │   │       └── route.ts     # Handles POST requests for creating bookings (Zoho interaction)
+│   │   └── route.ts         # Handles POST requests for creating bookings (Zoho interaction)
 │   ├── book\                # Route for the main booking page (e.g., /book)
 │   │   └── page.tsx         # Main Server Component for the booking page route
 │   ├── layout.tsx           # Root layout component (applies to all routes)
